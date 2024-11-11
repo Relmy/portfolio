@@ -1,40 +1,24 @@
+import { Box } from '@mui/material';
 import { ThemeProvider } from '@mui/material/styles';
-import { useState } from 'react';
 import './App.css';
-import reactLogo from './assets/react.svg';
+import AboutMe from './components/aboutMe';
 import Navbar from './components/navbar';
+import Technologies from './components/technologies';
 import theme from './theme';
-import viteLogo from '/vite.svg';
 
 function App() {
-  const [count, setCount] = useState(0);
 
   return (
-    <>
-      <ThemeProvider theme={theme}>
-      <div>
-          <Navbar />
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-      </ThemeProvider>
-    </>
+    <ThemeProvider theme={theme}>
+      <Box id='Box' sx={{
+        background: 'linear-gradient(rgba(1,3,38,1) 60%, rgba(23,37,115,1) 100%, rgba(106,102,217,1) 85%)',
+        height: '100vh'
+      }}>
+        <Navbar />
+        <AboutMe />
+        <Technologies />
+      </Box>
+    </ThemeProvider>
   );
 }
 

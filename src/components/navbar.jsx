@@ -24,7 +24,6 @@ function Navbar() {
     setAnchorElNav(null);
   };
 
-
   return (
     <AppBar position="static">
       <Container maxWidth="xl">
@@ -35,7 +34,7 @@ function Navbar() {
             noWrap
             sx={{
               mr: 2,
-              pr:2,
+              pr: 2,
               display: { xs: 'none', md: 'flex' },
               fontFamily: 'monospace',
               fontWeight: 700,

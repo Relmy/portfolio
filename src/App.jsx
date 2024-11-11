@@ -12,7 +12,8 @@ function App() {
     <ThemeProvider theme={theme}>
       <Box id='Box' sx={{
         background: 'linear-gradient(rgba(1,3,38,1) 60%, rgba(23,37,115,1) 100%, rgba(106,102,217,1) 85%)',
-        height: '100vh'
+        minHeight: '100vh',
+        pb: 5
       }}>
         <Navbar />
         <AboutMe />

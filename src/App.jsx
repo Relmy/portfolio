@@ -1,4 +1,4 @@
-import { Box } from '@mui/material';
+import { Paper } from '@mui/material';
 import { ThemeProvider } from '@mui/material/styles';
 import './App.css';
 import AboutMe from './components/aboutMe';
@@ -10,15 +10,16 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Box id='Box' sx={{
+      <Paper sx={{
         background: 'linear-gradient(rgba(1,3,38,1) 60%, rgba(23,37,115,1) 100%, rgba(106,102,217,1) 85%)',
         minHeight: '100vh',
-        pb: 5
+        pb: 5,
+        borderRadius: 0
       }}>
         <Navbar />
         <AboutMe />
         <Technologies />
-      </Box>
+      </Paper>
     </ThemeProvider>
   );
 }

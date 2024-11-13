@@ -1,4 +1,4 @@
-import { Box, Card, CardMedia, Grid2 as Grid } from '@mui/material';
+import { Box, Card, CardMedia, Grid2 as Grid, Typography } from '@mui/material';
 import * as React from 'react';
 
 const tech = [
@@ -75,12 +75,15 @@ const tech = [
 
 export default function Technologies() {
   return (
-    <Box sx={{ display: 'flex', justifyContent: 'center', m: 3 }}>
-      <Grid container spacing={2} sx={{ justifyContent: 'center', width: { xs: '100vw', md: '60vw' } }}>
+    <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', m: 3, gap: 2 }}>
+      <Typography variant='h1'>
+        Technologies
+      </Typography>
+      <Grid container spacing={2} sx={{ justifyContent: 'center', width: { xs: '100vw', md: '70vw' } }}>
         {
           tech.map((item) => {
             return (
-              <Grid>
+              <Grid key={item.name}>
                 <Card variant='outlined' sx={{
                   width: '100px',
                   height: '100px',
@@ -91,11 +94,11 @@ export default function Technologies() {
                 }}>
                   <CardMedia
                     component="img"
-                    image={item.src}
+                    image={`technologies/${item.src}`}
                     alt={item.name}
                     sx={{
-                      width: '70px',
-                      maxHeight: '70px',
+                      width: '70%',
+                      maxHeight: '70%',
                       objectFit: 'contain',
                     }}
                   />

@@ -3,6 +3,7 @@ import { ThemeProvider } from '@mui/material/styles';
 import './App.css';
 import AboutMe from './components/aboutMe';
 import Navbar from './components/navbar';
+import Projects from './components/projects';
 import Technologies from './components/technologies';
 import theme from './theme';
 
@@ -19,6 +20,7 @@ function App() {
         <Navbar />
         <AboutMe />
         <Technologies />
+        <Projects />
       </Paper>
     </ThemeProvider>
   );

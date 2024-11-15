@@ -19,16 +19,16 @@ const theme = createTheme({
       main: '#F07EF2',
     },
     purple: {
-      main: '#6A66D9'
+      main: '#6A66D9',
     },
     blue: {
-      main: '#1D64F2'
+      main: '#1D64F2',
     },
     darkBlue: {
-      main: '#172573'
+      main: '#172573',
     },
     blueBlack: {
-      main: '#010326'
+      main: '#010326',
     },
   },
   typography: {

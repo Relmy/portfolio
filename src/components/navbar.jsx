@@ -28,7 +28,9 @@ function Navbar() {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <ImportantDevicesIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          <ImportantDevicesIcon
+            sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}
+          />
           <Typography
             variant="h6"
             noWrap
@@ -80,7 +82,9 @@ function Navbar() {
             </Menu>
           </Box>
           {/* Mobile - Center Logo+text */}
-          <ImportantDevicesIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+          <ImportantDevicesIcon
+            sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }}
+          />
           <Typography
             variant="h5"
             noWrap
@@ -100,7 +104,13 @@ function Navbar() {
             CJ
           </Typography>
           {/* Navigation Buttons */}
-          <Box sx={{ flexGrow: 1, justifyContent: 'end', display: { xs: 'none', md: 'flex' } }}>
+          <Box
+            sx={{
+              flexGrow: 1,
+              justifyContent: 'end',
+              display: { xs: 'none', md: 'flex' },
+            }}
+          >
             {pages.map((page) => (
               <Button
                 key={page}

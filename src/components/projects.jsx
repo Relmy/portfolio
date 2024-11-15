@@ -88,10 +88,12 @@ function ProjectCard({ project, accentColor = null }) {
         maxWidth: 500,
         height: '100%',
         margin: 'auto',
-        boxShadow: '0 0 20px 0 rgba(0,0,0,0.12)',
         transition: '0.3s',
         display: 'flex',
         flexDirection: 'column',
+        background:
+          'radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 50%, transparent 100%)',
+        backgroundSize: '200% 200%',
       }}
     >
       <CardMedia
@@ -111,7 +113,7 @@ function ProjectCard({ project, accentColor = null }) {
           height: 50,
           backgroundColor: '#fff',
           border: `2px solid ${color}`,
-          boxShadow: `0px 0px 5px 2px ${color}`,
+          boxShadow: `2px 3px 10px -1px ${color}`,
           margin: '-48px 32px 0 auto',
           '& > img': {
             margin: 0,
@@ -129,8 +131,8 @@ function ProjectCard({ project, accentColor = null }) {
                   label={tech}
                   variant="outlined"
                   sx={{
-                    border: `1px solid ${color}`,
-                    boxShadow: `inset 0px 0px 5px 2px ${color}`,
+                    border: `1px solid rgb(106, 102, 217, 0.2)`,
+                    boxShadow: `inset 0px 0px 10px -2px ${color}`,
                     mr: 1,
                     mb: 0.5,
                   }}

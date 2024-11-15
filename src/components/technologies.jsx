@@ -1,3 +1,4 @@
+import { useTheme } from '@emotion/react';
 import { Box, Card, CardMedia, Grid2 as Grid, Typography } from '@mui/material';
 import * as React from 'react';
 
@@ -73,7 +74,12 @@ const tech = [
   },
 ];
 
+/**
+ * Main Technologies component, displays technologies/languages I have experience with
+ * @returns {JSX.Element}
+ */
 export default function Technologies() {
+  const theme = useTheme();
   return (
     <Box
       sx={{
@@ -99,11 +105,22 @@ export default function Technologies() {
                 sx={{
                   width: '100px',
                   height: '100px',
-                  boxShadow:
-                    'inset 0px 0px 30px 5px rgba(23,37,115,0.5), inset 0px 0px 25px 5px rgba(29,100,242,0.5), inset 0px 0px 15px 0px rgb(106, 102, 217), inset 0px 0px 5px 2px #F07EF2',
                   display: 'flex',
+                  flexDirection: 'column',
                   alignItems: 'center',
                   justifyContent: 'center',
+                  background:
+                    'radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 50%, transparent 100%)',
+                  boxShadow: `0 10px 30px -20px ${theme.palette.purple.main}`,
+                  backgroundSize: '100% 200%',
+                  '&:hover': {
+                    boxShadow: `0 10px 100px -20px ${theme.palette.purple.main}, 0 10px 50px -20px ${theme.palette.purple.main}, 0 10px 50px -20px ${theme.palette.purple.main}`,
+                    // Hide text until hovered
+                    '+ p': {
+                      opacity: 1,
+                      transition: '1s',
+                    },
+                  },
                 }}
               >
                 <CardMedia
@@ -117,6 +134,13 @@ export default function Technologies() {
                   }}
                 />
               </Card>
+              <Typography sx={{
+                textAlign: 'center',
+                // Always show name on mobile (no hover)
+                opacity: {xs: 1, md: 0},
+              }}>
+                {item.name}
+              </Typography>
             </Grid>
           );
         })}

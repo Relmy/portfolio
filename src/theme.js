@@ -1,6 +1,6 @@
 import { createTheme } from '@mui/material/styles';
 
-const theme = createTheme({
+let theme = createTheme({
   palette: {
     mode: 'dark',
     primary: {
@@ -77,12 +77,15 @@ const theme = createTheme({
   shape: {
     borderRadius: 30,
   },
+});
+
+theme = createTheme(theme, {
   components: {
     /* TODO: finish paper gradient changes */
     MuiPaper: {
       styleOverrides: {
         root: {
-          background: 'radial-gradient(circle, rgba(1,3,38,1) 60%, rgba(23,37,115,1) 100%, rgba(106,102,217,1) 85%)',
+          // background: 'radial-gradient(circle, rgba(1,3,38,1) 60%, rgba(23,37,115,1) 100%, rgba(106,102,217,1) 85%)',
         },
         outlined: {
           // background: 'radial-gradient(circle, rgba(1,3,38,1) 60%, rgba(23,37,115,1) 80%, rgba(106,102,217,1) 100%, #F07EF2 100%)',
@@ -90,6 +93,17 @@ const theme = createTheme({
         },
       },
     },
+    //button base?
+    MuiButton: {
+      // add glow to button hovers
+      styleOverrides: {
+        root: {
+          // '&:hover': {
+          //   boxShadow: `0 10px 100px -20px ${theme.palette.purple.main}, 0 10px 50px -20px ${theme.palette.purple.main}, 0 10px 50px -20px ${theme.palette.purple.main}`,
+          // },
+        },
+      },
+    }
   },
 });
 

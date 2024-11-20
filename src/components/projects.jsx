@@ -29,7 +29,7 @@ const projects = [
   {
     name: 'BrokerPocket',
     summary:
-      'A real estate agent-exclusive marketplace for off-market listings.Mobile application for real estate agents to provide search tools for their clients',
+      'A real estate agent-exclusive marketplace for off-market listings. Mobile application for real estate agents to provide search tools for their clients',
     desc: '',
     logo: 'bp_icon.png',
     image: 'bp_preview.png',
@@ -51,10 +51,10 @@ const projects = [
   {
     name: 'React Portfolio Site',
     summary:
-      'Basic portfolio webpage built utilizing React, MUI and hosted on GitHub Page',
+      "Basic portfolio webpage built utilizing React, MUI and hosted on GitHub Page. You're here now!",
     desc: '',
     logo: 'cj_logo.png',
-    image: '',
+    image: 'react-portfolio.png',
     technologies: ['React.js', 'MUI', 'HTML', 'CSS'],
     github: 'https://github.com/Relmy/Portfolio',
     website: 'https://relmy.github.io/Portfolio/',

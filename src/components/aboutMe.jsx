@@ -13,6 +13,7 @@ export default function AboutMe() {
         sx={{
           display: 'flex',
           justifyContent: 'space-evenly',
+          flexDirection: { xs: 'column', md: 'row' },
           my: { xs: 5, md: 10 },
           mx: 'auto',
           gap: 2,
@@ -24,6 +25,8 @@ export default function AboutMe() {
           sx={{
             display: 'flex',
             flexDirection: 'column',
+            flexShrink: '0',
+            p: '16px',
           }}
         >
           <Typography
@@ -79,9 +82,11 @@ export default function AboutMe() {
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'space-between',
-            maxWidth: '50vw',
+            maxWidth: { xs: 'auto', md: '50vw' },
             gap: 1,
             p: 2,
+            background:
+              'radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 50%, transparent 100%)',
           }}
         >
           <Typography variant="body1">

@@ -30,7 +30,7 @@ const tech = [
   },
   {
     name: 'CSS',
-    src: 'css3.svg',
+    src: 'css.svg',
   },
   {
     name: 'AWS',

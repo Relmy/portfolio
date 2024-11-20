@@ -53,7 +53,7 @@ const projects = [
     summary:
       'Basic portfolio webpage built utilizing React, MUI and hosted on GitHub Page',
     desc: '',
-    logo: 'cj_logo.svg',
+    logo: 'cj_logo.png',
     image: '',
     technologies: ['React.js', 'MUI', 'HTML', 'CSS'],
     github: 'https://github.com/Relmy/Portfolio',

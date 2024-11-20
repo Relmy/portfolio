@@ -150,12 +150,12 @@ function ProjectCard({ project, accentColor = null }) {
       </CardContent>
       <Box px={2} pb={2} mt={1}>
         {project?.github && (
-          <IconButton>
+          <IconButton href={project?.github}>
             <GitHubIcon />
           </IconButton>
         )}
         {project?.website && (
-          <IconButton>
+          <IconButton href={project?.website}>
             <LaunchIcon />
           </IconButton>
         )}

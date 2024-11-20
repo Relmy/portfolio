@@ -68,7 +68,7 @@ export default function AboutMe() {
             <IconButton href="https://github.com/Relmy">
               <GitHubIcon />
             </IconButton>
-            <IconButton href="www.linkedin.com/in/cj-elmy">
+            <IconButton href="https://www.linkedin.com/in/cj-elmy">
               <LinkedInIcon />
             </IconButton>
           </Box>

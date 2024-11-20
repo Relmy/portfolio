@@ -170,34 +170,39 @@ function ProjectCard({ project, accentColor = null }) {
  */
 export default function Projects() {
   return (
-    <Box
-      sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        m: 3,
-        gap: 2,
-      }}
-    >
-      <Typography variant="h1">Projects</Typography>
-      <Typography variant="subtitle">
-        Here you will find a selection of my current and past work/projects
-      </Typography>
-      <Grid
-        id="projects_gird"
-        container
-        spacing={2}
-        sx={{ justifyContent: 'center', maxWidth: { xs: '100vw', md: '80vw' } }}
+    <section id="Projects">
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          m: 3,
+          gap: 2,
+        }}
       >
-        {projects.map((project) => {
-          return (
-            <Grid key={project.name} size={{ xs: 12, md: 6, lg: 'auto' }}>
-              <ProjectCard project={project} />
-            </Grid>
-          );
-        })}
-      </Grid>
-    </Box>
+        <Typography variant="h1">Projects</Typography>
+        <Typography variant="subtitle">
+          Here you will find a selection of my current and past work/projects
+        </Typography>
+        <Grid
+          id="projects_gird"
+          container
+          spacing={2}
+          sx={{
+            justifyContent: 'center',
+            maxWidth: { xs: '100vw', md: '80vw' },
+          }}
+        >
+          {projects.map((project) => {
+            return (
+              <Grid key={project.name} size={{ xs: 12, md: 6, lg: 'auto' }}>
+                <ProjectCard project={project} />
+              </Grid>
+            );
+          })}
+        </Grid>
+      </Box>
+    </section>
   );
 }

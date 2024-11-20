@@ -81,70 +81,74 @@ const tech = [
 export default function Technologies() {
   const theme = useTheme();
   return (
-    <Box
-      sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        m: 3,
-        gap: 2,
-      }}
-    >
-      <Typography variant="h1">Technologies</Typography>
-      <Grid
-        container
-        spacing={2}
-        sx={{ justifyContent: 'center', width: { xs: '100vw', md: '70vw' } }}
+    <section id="Technologies">
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          m: 3,
+          gap: 2,
+        }}
       >
-        {tech.map((item) => {
-          return (
-            <Grid key={item.name}>
-              <Card
-                variant="outlined"
-                sx={{
-                  width: '100px',
-                  height: '100px',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  background:
-                    'radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 50%, transparent 100%)',
-                  boxShadow: `0 10px 30px -20px ${theme.palette.purple.main}`,
-                  backgroundSize: '100% 200%',
-                  '&:hover': {
-                    boxShadow: `0 10px 100px -20px ${theme.palette.purple.main}, 0 10px 50px -20px ${theme.palette.purple.main}, 0 10px 50px -20px ${theme.palette.purple.main}`,
-                    // Hide text until hovered
-                    '+ p': {
-                      opacity: 1,
-                      transition: '1s',
-                    },
-                  },
-                }}
-              >
-                <CardMedia
-                  component="img"
-                  image={`technologies/${item.src}`}
-                  alt={item.name}
+        <Typography variant="h1">Technologies</Typography>
+        <Grid
+          container
+          spacing={2}
+          sx={{ justifyContent: 'center', width: { xs: '100vw', md: '70vw' } }}
+        >
+          {tech.map((item) => {
+            return (
+              <Grid key={item.name}>
+                <Card
+                  variant="outlined"
                   sx={{
-                    width: '70%',
-                    maxHeight: '70%',
-                    objectFit: 'contain',
+                    width: '100px',
+                    height: '100px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    background:
+                      'radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 50%, transparent 100%)',
+                    boxShadow: `0 10px 30px -20px ${theme.palette.purple.main}`,
+                    backgroundSize: '100% 200%',
+                    '&:hover': {
+                      boxShadow: `0 10px 100px -20px ${theme.palette.purple.main}, 0 10px 50px -20px ${theme.palette.purple.main}, 0 10px 50px -20px ${theme.palette.purple.main}`,
+                      // Hide text until hovered
+                      '+ p': {
+                        opacity: 1,
+                        transition: '1s',
+                      },
+                    },
                   }}
-                />
-              </Card>
-              <Typography sx={{
-                textAlign: 'center',
-                // Always show name on mobile (no hover)
-                opacity: {xs: 1, md: 0},
-              }}>
-                {item.name}
-              </Typography>
-            </Grid>
-          );
-        })}
-      </Grid>
-    </Box>
+                >
+                  <CardMedia
+                    component="img"
+                    image={`technologies/${item.src}`}
+                    alt={item.name}
+                    sx={{
+                      width: '70%',
+                      maxHeight: '70%',
+                      objectFit: 'contain',
+                    }}
+                  />
+                </Card>
+                <Typography
+                  sx={{
+                    textAlign: 'center',
+                    // Always show name on mobile (no hover)
+                    opacity: { xs: 1, md: 0 },
+                  }}
+                >
+                  {item.name}
+                </Typography>
+              </Grid>
+            );
+          })}
+        </Grid>
+      </Box>
+    </section>
   );
 }

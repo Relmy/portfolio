@@ -11,7 +11,8 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import * as React from 'react';
 
-const pages = ['Technologies', 'Projects', 'Contact'];
+// TODO: Add contact section w/ emailjs
+const pages = ['Technologies', 'Projects']; //, 'Contact'];
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -89,7 +90,7 @@ function Navbar() {
             variant="h5"
             noWrap
             component="a"
-            href="#app-bar-with-responsive-menu"
+            href="#About"
             sx={{
               mr: 2,
               display: { xs: 'flex', md: 'none' },
@@ -113,6 +114,8 @@ function Navbar() {
           >
             {pages.map((page) => (
               <Button
+                component="a"
+                href={`#${page}`}
                 key={page}
                 onClick={handleCloseNavMenu}
                 sx={{ color: 'white', display: 'block' }}

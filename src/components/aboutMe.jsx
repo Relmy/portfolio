@@ -2,7 +2,7 @@ import { useTheme } from '@emotion/react';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import { Box, IconButton, Paper, Typography } from '@mui/material';
+import { Box, IconButton, Paper, Tooltip, Typography } from '@mui/material';
 import * as React from 'react';
 
 export default function AboutMe() {
@@ -65,15 +65,21 @@ export default function AboutMe() {
             B.Sc. Computer Science
           </Typography>
           <Box>
-            <IconButton href="mailto:cjelmy@pm.me">
-              <AlternateEmailIcon />
-            </IconButton>
-            <IconButton href="https://github.com/Relmy">
-              <GitHubIcon />
-            </IconButton>
-            <IconButton href="https://www.linkedin.com/in/cj-elmy">
-              <LinkedInIcon />
-            </IconButton>
+            <Tooltip title="Email me!">
+              <IconButton href="mailto:cjelmy@pm.me" aria-label="Email">
+                <AlternateEmailIcon />
+              </IconButton>
+            </Tooltip>
+            <Tooltip title="Github">
+              <IconButton href="https://github.com/Relmy">
+                <GitHubIcon />
+              </IconButton>
+            </Tooltip>
+            <Tooltip title="LinkedIn">
+              <IconButton href="https://www.linkedin.com/in/cj-elmy">
+                <LinkedInIcon />
+              </IconButton>
+            </Tooltip>
           </Box>
         </Box>
         {/* More info about me */}
@@ -91,13 +97,17 @@ export default function AboutMe() {
         >
           <Typography variant="body1">
             I discovered my passion for developing elegant solutions in 2013 and
-            have been learning and improving since!
+            have been learning and improving since 🤗
           </Typography>
           <Typography variant="body1">
-            Below you will find technologies I've worked with and some info
-            about my past experience and projects.
+            I love being able to build unique solutions that can positively
+            impact those who use and maintain it!
           </Typography>
-          <Typography variant="body1">Enjoy your stay! c:</Typography>
+          <Typography variant="body1">
+            Below you will find technologies I've worked with and info about
+            some of my past projects
+          </Typography>
+          <Typography variant="body1">Enjoy your stay! ✌️</Typography>
         </Paper>
       </Box>
     </section>

@@ -56,8 +56,8 @@ const projects = [
     logo: 'cj_logo.png',
     image: 'react-portfolio.png',
     technologies: ['React.js', 'MUI', 'HTML', 'CSS'],
-    github: 'https://github.com/Relmy/Portfolio',
-    website: 'https://relmy.github.io/Portfolio/',
+    github: 'https://github.com/Relmy/portfolio',
+    website: 'https://relmy.github.io/portfolio/',
   },
   {
     name: 'Reach',

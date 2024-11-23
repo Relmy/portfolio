@@ -123,24 +123,29 @@ function ProjectCard({ project, accentColor = null }) {
       <CardContent sx={{ p: 3, flexGrow: 2 }}>
         <Box>
           <Typography variant="h1">{project.name}</Typography>
-          {project.technologies.map((tech) => {
-            return (
-              <>
-                <Chip
-                  key={tech}
-                  label={tech}
-                  variant="outlined"
-                  sx={{
-                    border: `1px solid rgb(106, 102, 217, 0.2)`,
-                    boxShadow: `inset 0px 0px 10px -2px ${color}`,
-                    mr: 1,
-                    mb: 0.5,
-                  }}
-                />
-              </>
-            );
-          })}
-          <br />
+          <Box
+            sx={{
+              my: 1,
+            }}
+          >
+            {project.technologies.map((tech) => {
+              return (
+                <>
+                  <Chip
+                    key={tech}
+                    label={tech}
+                    variant="outlined"
+                    sx={{
+                      border: `1px solid rgb(106, 102, 217, 0.2)`,
+                      boxShadow: `inset 0px 0px 10px -2px ${color}`,
+                      mr: 1,
+                      mb: 0.5,
+                    }}
+                  />
+                </>
+              );
+            })}
+          </Box>
           <Typography variant="subtitle">
             <b>{project.summary}</b>{' '}
           </Typography>
@@ -196,7 +201,7 @@ export default function Projects() {
         >
           {projects.map((project) => {
             return (
-              <Grid key={project.name} size={{ xs: 12, md: 6, lg: 'auto' }}>
+              <Grid key={project.name} size={{ xs: 12, sm: 6, lg: 4 }}>
                 <ProjectCard project={project} />
               </Grid>
             );

@@ -1,15 +1,21 @@
-import ImportantDevicesIcon from '@mui/icons-material/ImportantDevices';
-import MenuIcon from '@mui/icons-material/Menu';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Container from '@mui/material/Container';
-import IconButton from '@mui/material/IconButton';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 import * as React from 'react';
+
+import MenuIcon from '@mui/icons-material/Menu';
+import CJIcon from '../assets/cjIcon';
+
+import {
+  AppBar,
+  Box,
+  Button,
+  Container,
+  IconButton,
+  Link,
+  Menu,
+  MenuItem,
+  Toolbar,
+  Typography,
+} from '@mui/material';
+import { alpha } from '@mui/material/styles';
 
 // TODO: Add contact section w/ emailjs
 const pages = ['Technologies', 'Projects']; //, 'Contact'];
@@ -26,33 +32,71 @@ function Navbar() {
   };
 
   return (
-    <AppBar position="static">
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          {/* Desktop Icon and Text */}
-          <ImportantDevicesIcon
-            sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}
-          />
-          <Typography
-            variant="h6"
-            noWrap
+    <AppBar
+      position="fixed"
+      sx={{
+        boxShadow: 0,
+        bgcolor: 'transparent',
+        backgroundImage: 'none',
+        mt: 'calc(var(--template-frame-height, 0px) + 16px)',
+      }}
+    >
+      <Container maxWidth="lg">
+        <Toolbar
+          id="navbar"
+          disableGutters
+          sx={[
+            (theme) => ({
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              flexShrink: 0,
+              borderRadius: `calc(${theme.shape.borderRadius}px + 8px)`,
+              backdropFilter: 'blur(24px)',
+              border: '1px solid',
+              borderColor: (theme.vars || theme).palette.divider,
+              backgroundColor: theme.vars
+                ? `rgba(${theme.vars.palette.background.defaultChannel} / 0.4)`
+                : alpha(theme.palette.background.default, 0.4),
+              boxShadow: (theme.vars || theme).shadows[1],
+              padding: '8px 12px',
+            }),
+          ]}
+        >
+          {/* CJ Logo/Icon */}
+          <Box
+            sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', px: 0 }}
+          >
+            <Link href="#About" height={'24px'}>
+              <CJIcon sx={{ mx: 1 }} />
+            </Link>
+          </Box>
+          {/* Desktop - Navigation Buttons */}
+          <Box
             sx={{
-              mr: 2,
-              pr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              color: 'inherit',
-              textDecoration: 'none',
+              display: { xs: 'none', sm: 'flex' },
+              alignItems: 'center',
+              mx: 1,
             }}
           >
-            CJ
-          </Typography>
+            {pages.map((page) => (
+              <Button
+                component="a"
+                href={`#${page}`}
+                key={page}
+                onClick={handleCloseNavMenu}
+                sx={{ color: 'white', display: 'block' }}
+                size="small"
+              >
+                {page}
+              </Button>
+            ))}
+          </Box>
           {/* Mobile - Menu Button */}
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box sx={{ display: { xs: 'flex', sm: 'none' } }}>
             <IconButton
-              size="large"
-              aria-label="account of current user"
+              size="small"
+              aria-label="Menu button"
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
@@ -75,6 +119,18 @@ function Navbar() {
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{ display: { xs: 'block', md: 'none' } }}
+              slotProps={{
+                paper: {
+                  variant: 'outlined',
+                  elevation: 0,
+                  sx: {
+                    my: '10px',
+                    borderRadius: '20px',
+                    backgroundColor: 'transparent',
+                    backdropFilter: 'blur(24px)',
+                  },
+                },
+              }}
             >
               {pages.map((page) => (
                 <MenuItem
@@ -87,48 +143,6 @@ function Navbar() {
                 </MenuItem>
               ))}
             </Menu>
-          </Box>
-          {/* Mobile - Center Logo+text */}
-          <ImportantDevicesIcon
-            sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }}
-          />
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href="#About"
-            sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            CJ
-          </Typography>
-          {/* Navigation Buttons */}
-          <Box
-            sx={{
-              flexGrow: 1,
-              justifyContent: 'end',
-              display: { xs: 'none', md: 'flex' },
-            }}
-          >
-            {pages.map((page) => (
-              <Button
-                component="a"
-                href={`#${page}`}
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ color: 'white', display: 'block' }}
-              >
-                {page}
-              </Button>
-            ))}
           </Box>
         </Toolbar>
       </Container>

@@ -1,4 +1,4 @@
-import { Paper } from '@mui/material';
+import { Container, CssBaseline } from '@mui/material';
 import { ThemeProvider } from '@mui/material/styles';
 import './App.css';
 import AboutMe from './components/aboutMe';
@@ -10,20 +10,20 @@ import theme from './theme';
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Paper
-        sx={{
-          background:
-            'linear-gradient(rgba(1,3,38,1) 60%, rgba(23,37,115,1) 100%, rgba(106,102,217,1) 85%)',
-          minHeight: '100vh',
-          pb: 5,
-          borderRadius: 0,
-        }}
+      <CssBaseline />
+      <Navbar />
+      <Container
+        maxWidth="xl"
+        sx={(theme) => ({
+          width: '100%',
+          backgroundRepeat: 'no-repeat',
+          backgroundImage: `radial-gradient(ellipse 60% 40% at 50% -20%, ${theme.palette.primary.main}, transparent)`,
+        })}
       >
-        <Navbar />
         <AboutMe />
         <Technologies />
         <Projects />
-      </Paper>
+      </Container>
     </ThemeProvider>
   );
 }

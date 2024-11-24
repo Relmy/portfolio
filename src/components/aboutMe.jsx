@@ -13,11 +13,11 @@ export default function AboutMe() {
         sx={{
           display: 'flex',
           justifyContent: 'space-evenly',
-          flexDirection: { xs: 'column', md: 'row' },
-          my: { xs: 5, md: 10 },
+          flexDirection: { xs: 'column', sm: 'row' },
           mx: 'auto',
           gap: 2,
           maxWidth: '900px',
+          pt: { xs: 10, sm: 16 },
         }}
       >
         {/* Left Section: Greeting, name, position, and education */}

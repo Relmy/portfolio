@@ -182,8 +182,8 @@ export default function Projects() {
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
-          m: 3,
           gap: 2,
+          pt: { xs: 10, sm: 14 },
         }}
       >
         <Typography variant="h1">Projects</Typography>

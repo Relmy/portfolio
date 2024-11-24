@@ -88,15 +88,15 @@ export default function Technologies() {
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
-          m: 3,
           gap: 2,
+          pt: { xs: 10, sm: 14 },
         }}
       >
         <Typography variant="h1">Technologies</Typography>
         <Grid
           container
           spacing={2}
-          sx={{ justifyContent: 'center', width: { xs: '100vw', md: '70vw' } }}
+          sx={{ justifyContent: 'center', width: { xs: '100%', md: '80%' } }}
         >
           {tech.map((item) => {
             return (

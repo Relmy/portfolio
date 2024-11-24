@@ -4,10 +4,10 @@ let theme = createTheme({
   palette: {
     mode: 'dark',
     primary: {
-      main: '#1d64f2',
+      main: '#6a66d9',
     },
     secondary: {
-      main: '#6a66d9',
+      main: '#1d64f2',
     },
     background: {
       default: '#010218',
@@ -81,15 +81,14 @@ let theme = createTheme({
 
 theme = createTheme(theme, {
   components: {
-    /* TODO: finish paper gradient changes */
     MuiPaper: {
       styleOverrides: {
         root: {
           // background: 'radial-gradient(circle, rgba(1,3,38,1) 60%, rgba(23,37,115,1) 100%, rgba(106,102,217,1) 85%)',
         },
         outlined: {
-          // background: 'radial-gradient(circle, rgba(1,3,38,1) 60%, rgba(23,37,115,1) 80%, rgba(106,102,217,1) 100%, #F07EF2 100%)',
-          // borderColor: '#F07EF2',
+          // backgroundColor: 'transparent',
+          // backdropFilter: 'blur(24px)',
         },
       },
     },
@@ -103,7 +102,7 @@ theme = createTheme(theme, {
           // },
         },
       },
-    }
+    },
   },
 });
 

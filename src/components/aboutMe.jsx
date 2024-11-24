@@ -39,7 +39,7 @@ export default function AboutMe() {
             Welcome!
           </Typography>
           <Typography
-            variant="h3"
+            variant="h2"
             sx={{
               textShadow: `1px 1px 10px ${theme.palette.purple.main}, -1px -1px 10px ${theme.palette.pink.main}`,
               mb: 1,
@@ -64,6 +64,7 @@ export default function AboutMe() {
           >
             B.Sc. Computer Science
           </Typography>
+          {/* Social buttons */}
           <Box>
             <Tooltip title="Email me!">
               <IconButton href="mailto:cjelmy@pm.me" aria-label="Email">
@@ -84,6 +85,7 @@ export default function AboutMe() {
         </Box>
         {/* More info about me */}
         <Paper
+          variant="outlined"
           sx={{
             display: 'flex',
             flexDirection: 'column',
@@ -91,8 +93,9 @@ export default function AboutMe() {
             maxWidth: { xs: 'auto', md: '50vw' },
             gap: 1,
             p: 2,
-            background:
-              'radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 50%, transparent 100%)',
+            boxShadow: `0 10px 30px -20px ${theme.palette.purple.main}`,
+            backgroundColor: 'transparent',
+            backdropFilter: 'blur(24px)',
           }}
         >
           <Typography variant="body1">

@@ -1,9 +1,9 @@
-import { useTheme } from '@emotion/react';
-import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import { Box, IconButton, Paper, Tooltip, Typography } from '@mui/material';
 import * as React from 'react';
+
+import { useTheme } from '@emotion/react';
+import { Box, Paper, Typography } from '@mui/material';
+
+import SocialButtons from './socialButtons';
 
 export default function AboutMe() {
   const theme = useTheme();
@@ -65,23 +65,7 @@ export default function AboutMe() {
             B.Sc. Computer Science
           </Typography>
           {/* Social buttons */}
-          <Box>
-            <Tooltip title="Email me!">
-              <IconButton href="mailto:cjelmy@pm.me" aria-label="Email">
-                <AlternateEmailIcon />
-              </IconButton>
-            </Tooltip>
-            <Tooltip title="Github">
-              <IconButton href="https://github.com/Relmy">
-                <GitHubIcon />
-              </IconButton>
-            </Tooltip>
-            <Tooltip title="LinkedIn">
-              <IconButton href="https://www.linkedin.com/in/cj-elmy">
-                <LinkedInIcon />
-              </IconButton>
-            </Tooltip>
-          </Box>
+          <SocialButtons />
         </Box>
         {/* More info about me */}
         <Paper

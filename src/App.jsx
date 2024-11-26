@@ -2,6 +2,7 @@ import { Container, CssBaseline } from '@mui/material';
 import { ThemeProvider } from '@mui/material/styles';
 import './App.css';
 import AboutMe from './components/aboutMe';
+import Footer from './components/footer';
 import Navbar from './components/navbar';
 import Projects from './components/projects';
 import Technologies from './components/technologies';
@@ -24,6 +25,7 @@ function App() {
         <Technologies />
         <Projects />
       </Container>
+      <Footer />
     </ThemeProvider>
   );
 }

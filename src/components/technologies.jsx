@@ -8,6 +8,10 @@ const tech = [
     src: 'js.svg',
   },
   {
+    name: 'TypeScript',
+    src: 'ts.svg',
+  },
+  {
     name: 'Node.js',
     src: 'node.svg',
   },

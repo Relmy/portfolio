@@ -73,7 +73,8 @@ const projects = [
 ];
 /**
  * Card displaying project information
- * Card based on MUI Treasury Card-Post: https://mui-treasury.com/?path=/story/card-post--post
+ * 
+ * Card based on MUI Treasury Card-Post: @link https://mui-treasury.com/?path=/story/card-post--post
  * @param {project} object - containing project info
  *  {name, summary, desc, logo, image, technologies, github, website}
  * @param {color} String - optional param to adjust card accent color

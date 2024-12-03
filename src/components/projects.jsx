@@ -22,7 +22,7 @@ const projects = [
     desc: '',
     logo: 'roost_icon.png',
     image: 'roost_preview.png',
-    technologies: ['React Native', 'Expo', 'FireBase'],
+    technologies: ['React Native', 'Expo', 'Node.js', 'FireBase'],
     github: '',
     website: '',
   },
@@ -73,7 +73,7 @@ const projects = [
 ];
 /**
  * Card displaying project information
- * 
+ *
  * Card based on MUI Treasury Card-Post: @link https://mui-treasury.com/?path=/story/card-post--post
  * @param {project} object - containing project info
  *  {name, summary, desc, logo, image, technologies, github, website}

@@ -84,17 +84,17 @@ export default function AboutMe() {
         >
           <Typography variant="body1">
             I discovered my passion for developing elegant solutions in 2013 and
-            have been learning and improving since 🤗
+            have been elevating my craft since 🤗
           </Typography>
           <Typography variant="body1">
-            I love being able to build unique solutions that can positively
-            impact those who use and maintain it!
+            I thrive on building innovative and well crafted solutions that make
+            a positive impact for both users and maintainers alike!
           </Typography>
           <Typography variant="body1">
             Below you will find technologies I've worked with and info about
             some of my past projects
           </Typography>
-          <Typography variant="body1">Enjoy your stay! ✌️</Typography>
+          <Typography variant="body1">Thanks for stopping by! ✌️</Typography>
         </Paper>
       </Box>
     </section>

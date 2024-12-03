@@ -1,13 +1,23 @@
 import { Container, CssBaseline } from '@mui/material';
 import { ThemeProvider } from '@mui/material/styles';
+import ReactGA from 'react-ga4';
+
 import './App.css';
 import AboutMe from './components/aboutMe';
 import Footer from './components/footer';
 import Navbar from './components/navbar';
 import Projects from './components/projects';
 import Technologies from './components/technologies';
+import config from './config';
 import theme from './theme';
 
+ReactGA.initialize([
+  {
+    trackingId: config.google.analytics_id,
+    // gaOptions:
+    // gtagOptions:
+  },
+]);
 function App() {
   return (
     <ThemeProvider theme={theme}>

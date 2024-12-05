@@ -12,16 +12,19 @@ import Technologies from './components/technologies';
 import config from './config';
 import theme from './theme';
 
-// Google Analytics
-ReactGA.initialize([
-  {
-    trackingId: config.google.analytics_id,
-    // gaOptions:
-    // gtagOptions:
-  },
-]);
-// Microsoft Clarity
-Clarity.init(config.microsoft.clarity_id);
+// Don't track in DEV mode
+if (!import.meta.env.DEV) {
+  // Google Analytics
+  ReactGA.initialize([
+    {
+      trackingId: config.google.analytics_id,
+      // gaOptions:
+      // gtagOptions:
+    },
+  ]);
+  // Microsoft Clarity
+  Clarity.init(config.microsoft.clarity_id);
+}
 
 function App() {
   return (

@@ -1,3 +1,4 @@
+import Clarity from '@microsoft/clarity';
 import { Container, CssBaseline } from '@mui/material';
 import { ThemeProvider } from '@mui/material/styles';
 import ReactGA from 'react-ga4';
@@ -11,6 +12,7 @@ import Technologies from './components/technologies';
 import config from './config';
 import theme from './theme';
 
+// Google Analytics
 ReactGA.initialize([
   {
     trackingId: config.google.analytics_id,
@@ -18,6 +20,9 @@ ReactGA.initialize([
     // gtagOptions:
   },
 ]);
+// Microsoft Clarity
+Clarity.init(config.microsoft.clarity_id);
+
 function App() {
   return (
     <ThemeProvider theme={theme}>

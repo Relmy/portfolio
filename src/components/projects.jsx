@@ -34,7 +34,7 @@ const projects = [
     logo: 'bp_icon.png',
     image: 'bp_preview.png',
     technologies: [
-      'React.js',
+      'React',
       'Node.js',
       'Next.js',
       'AWS',
@@ -55,7 +55,7 @@ const projects = [
     desc: '',
     logo: 'cj_logo.png',
     image: 'react-portfolio.png',
-    technologies: ['React.js', 'MUI', 'HTML', 'CSS'],
+    technologies: ['React', 'MUI', 'HTML', 'CSS'],
     github: 'https://github.com/Relmy/portfolio',
     website: 'https://relmy.github.io/portfolio/',
   },
@@ -68,6 +68,39 @@ const projects = [
     image: 'reach_preview.png',
     technologies: ['Java', 'HTML', 'CSS', 'MySQL', 'Azure', 'Google Maps API'],
     github: 'https://github.com/ReachCP317/Reach',
+    website: '',
+  },
+  {
+    name: 'Component Taskbox | Storybook',
+    summary:
+      'Basic component taskbox using Storybook, used to develop in a Component-Driven Development methodology',
+    desc: '',
+    logo: 'cj_logo.png',
+    image: 'storybook_preview.png',
+    technologies: ['React', 'Storybook', 'Redux', 'HTML', 'CSS'],
+    github: 'https://github.com/Relmy/Component-Taskbox',
+    website: '',
+  },
+  {
+    name: 'MERN Memories',
+    summary:
+      'Simple application utilizing MERN Stack (React, Node.js, Express & MongoDB)',
+    desc: '',
+    logo: 'cj_logo.png',
+    image: 'mern_preview.png',
+    technologies: ['Express', 'MongoDB', 'React', 'Node.js', 'HTML', 'CSS'],
+    github: 'https://github.com/Relmy/MERN_Memories',
+    website: '',
+  },
+  {
+    name: 'AWS and React Demo',
+    summary:
+      'Simple React app utilizing AWS for backend. Created to demonstrate use of AWS for user storage and retrieval (Site no longer hosted)',
+    desc: '',
+    logo: 'cj_logo.png',
+    image: 'react_aws_preview.png',
+    technologies: ['AWS', 'MongoDB', 'React', 'MUI', 'HTML', 'CSS'],
+    github: 'https://github.com/Relmy/React-AWS',
     website: '',
   },
 ];

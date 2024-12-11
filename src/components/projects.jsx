@@ -164,19 +164,17 @@ function ProjectCard({ project, accentColor = null }) {
           >
             {project.technologies.map((tech) => {
               return (
-                <>
-                  <Chip
-                    key={tech}
-                    label={tech}
-                    variant="outlined"
-                    sx={{
-                      border: `1px solid rgb(106, 102, 217, 0.2)`,
-                      boxShadow: `inset 0px 0px 10px -2px ${color}`,
-                      mr: 1,
-                      mb: 0.5,
-                    }}
-                  />
-                </>
+                <Chip
+                  key={tech}
+                  label={tech}
+                  variant="outlined"
+                  sx={{
+                    border: `1px solid rgb(106, 102, 217, 0.2)`,
+                    boxShadow: `inset 0px 0px 10px -2px ${color}`,
+                    mr: 1,
+                    mb: 0.5,
+                  }}
+                />
               );
             })}
           </Box>

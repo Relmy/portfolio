@@ -65,7 +65,12 @@ export default function Footer() {
         </Box>
         {/* Navigation Links */}
         {sections.map((section) => (
-          <Link color="text.primary" variant="body2" href={`#${section}`}>
+          <Link
+            color="text.primary"
+            variant="body2"
+            href={`#${section}`}
+            key={section}
+          >
             {section}
           </Link>
         ))}

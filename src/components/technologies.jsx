@@ -16,6 +16,10 @@ const tech = [
     src: 'node.svg',
   },
   {
+    name: 'Express.js',
+    src: 'express.svg',
+  },
+  {
     name: 'Next.js',
     src: 'next.svg',
     website: 'https://nextjs.org/',
@@ -55,6 +59,10 @@ const tech = [
   {
     name: 'Selenium',
     src: 'selenium.svg',
+  },
+  {
+    name: 'Firebase',
+    src: 'firebase.svg',
   },
   {
     name: 'Java',

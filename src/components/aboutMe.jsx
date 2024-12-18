@@ -5,6 +5,11 @@ import { Box, Paper, Typography } from '@mui/material';
 
 import SocialButtons from './socialButtons';
 
+/**
+ * Main About Me component containing a brief summary of myself and my social links
+ *
+ * @returns {JSX.Element}
+ */
 export default function AboutMe() {
   const theme = useTheme();
   return (
@@ -87,8 +92,9 @@ export default function AboutMe() {
             have been elevating my craft since 🤗
           </Typography>
           <Typography variant="body1">
-            I thrive on building innovative and well crafted solutions that make
-            a positive impact for both users and maintainers alike!
+            I'm passionate about start-up culture and thrive on building
+            innovative and well crafted solutions that make a positive impact
+            for both users and maintainers alike!
           </Typography>
           <Typography variant="body1">
             Below you will find technologies I've worked with and info about

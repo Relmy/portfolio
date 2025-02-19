@@ -23,8 +23,8 @@ const projects = [
     logo: 'roost_icon.png',
     image: 'roost_preview.png',
     technologies: ['React Native', 'Expo', 'Node.js', 'FireBase'],
-    github: '',
-    website: '',
+    github: 'https://github.com/RoostApp-io',
+    website: 'https://roostapp.io/',
   },
   {
     name: 'BrokerPocket',
@@ -45,7 +45,7 @@ const projects = [
       'MUI',
       'Google Map/Places API',
     ],
-    github: '',
+    github: 'https://github.com/brokerpocket',
     website: 'https://brokerpocket.com/',
   },
   {
